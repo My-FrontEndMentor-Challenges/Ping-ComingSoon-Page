@@ -54,6 +54,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 .input-email,
 .form-btn {
@@ -120,8 +121,21 @@ form {
   color: hsl(0, 0%, 59%);
   font-size: 0.7rem;
 }
+
+/* Errors */
+.email-error {
+  position: relative;
+  bottom: -5px;
+  margin-bottom: 0.5rem;
+  left: 0;
+  font-size: 0.8rem;
+  color: hsl(354, 100%, 66%);
+}
+.email-error-border {
+  border: 1px solid hsl(354, 100%, 66%);
+}
 /* Media Queries */
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 640px) {
   .logo {
     height: 20px;
   }
@@ -133,19 +147,19 @@ form {
   }
   form {
     flex-direction: row;
-    width: 43%;
+    width: auto;
     justify-content: center;
   }
   .input-email,
   .form-btn {
     padding: 1rem 0 1rem 2rem;
-    width: 100%;
+    width: 400px;
   }
   .input-email {
     border: 1px solid hsl(223, 100%, 88%);
   }
   .form-btn {
-    width: 250px;
+    width: 180px;
     padding-left: 0;
     margin-left: 1rem;
     box-shadow: none;
@@ -161,5 +175,16 @@ form {
   }
   .fa-brands {
     font-size: 0.8rem;
+  }
+  .email-error {
+    position: absolute;
+    bottom: -20px;
+    left: 10px;
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    color: hsl(354, 100%, 66%);
+  }
+  .email-error-border {
+    border: 1px solid hsl(354, 100%, 66%);
   }
 }
